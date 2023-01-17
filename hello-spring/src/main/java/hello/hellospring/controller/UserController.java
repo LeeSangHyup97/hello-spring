@@ -1,6 +1,5 @@
 package hello.hellospring.controller;
 
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +18,9 @@ public class UserController {
     }
 
     @ResponseBody
-    @GetMapping ("/oauth/kakao")
+    @GetMapping ("/users/")
     public void login(@RequestParam String code) {
+        System.out.println(code);
         String access_Token = kakao.getKakaoAccessToken(code);
         System.out.println("controller access_token : " + access_Token);
     }

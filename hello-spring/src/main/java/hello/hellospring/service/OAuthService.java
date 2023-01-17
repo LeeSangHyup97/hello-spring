@@ -2,7 +2,6 @@ package hello.hellospring.service;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.google.gson.JsonElement;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -29,8 +28,8 @@ public class OAuthService {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream()));
             StringBuilder sb = new StringBuilder();
             sb.append("grant_type=authorization_code");
-            sb.append("&clinet_id=156d5a8df0245a4d3fad3af494e513f5"); // REST_API_KEY 입력
-            sb.append("&redirect_url=http://localhost:8080/oauth/kakao"); // redirect_url 입력
+            sb.append("&clinet_id=9226717f5eac2afc988c0a11740c8170"); // REST_API_KEY 입력
+            sb.append("&redirect_url=http://localhost:8080/users/new_user"); // redirect_url 입력
             sb.append("&code=" + code);
             bw.write(sb.toString());
             bw.flush();

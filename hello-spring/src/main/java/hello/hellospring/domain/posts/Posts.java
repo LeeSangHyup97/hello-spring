@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Getter
 @NoArgsConstructor
 @Entity // 테이블과 링크될 클래스임을 나타냄. 테이블 이름은 posts
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id
     @GeneratedValue
     private Long id;
